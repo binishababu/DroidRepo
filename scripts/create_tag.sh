@@ -13,7 +13,7 @@ releaseBranch=release-$versionLabel
 
 # create the release branch from the -develop branch
 git checkout -b $releaseBranch $devBranch
-
+echo $'Merge Test\E:x\n'
 # file in which to update version number
 #versionFile="version.txt"
 
@@ -40,4 +40,3 @@ git merge --no-ff $releaseBranch
 
 # remove release branch
 git branch -d $releaseBranch
-echo $'Merge Test\E:x\n'
