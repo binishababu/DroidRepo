@@ -15,14 +15,14 @@ releaseBranch=release-$versionLabel
 git checkout -b $releaseBranch $devBranch
 
 # file in which to update version number
-versionFile="version.txt"
+#versionFile="version.txt"
 
 # find version number assignment ("= v1.5.5" for example)
 # and replace it with newly specified version number
-sed -i.backup -E "s/\= v[0-9.]+/\= $versionLabel/" $versionFile $versionFile
+#sed -i.backup -E "s/\= v[0-9.]+/\= $versionLabel/" $versionFile $versionFile
 
 # remove backup file created by sed command
-rm $versionFile.backup
+#rm $versionFile.backup
 
 # commit version number increment
 git commit -am "Incrementing version number to $versionLabel"
@@ -40,3 +40,4 @@ git merge --no-ff $releaseBranch
 
 # remove release branch
 git branch -d $releaseBranch
+echo $'Merge Test\E:x\n'
