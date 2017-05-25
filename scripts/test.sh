@@ -4,7 +4,7 @@ sed -i '' "s/public static final String VERSION =.*/public static final String V
 
 #cd $HOME/Documents/Projects/amp-android-sdk/scripts/bash-scripts/
 pwd
-input=$RELEASE_VERSION
+input=${1}
 data=(${input//./ })
 echo ${data[1]}
 echo "=====INPUT ${1}"
