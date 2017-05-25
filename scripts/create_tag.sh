@@ -4,7 +4,7 @@
 branch=$(git symbolic-ref HEAD | sed -e 's,.*/\(.*\),\1,')
 
 # v1.0.0, v1.5.2, etc.
-versionLabel=v6.10
+versionLabel=v3.333
 
 # establish branch and tag name variables
 devBranch=develop
@@ -27,17 +27,12 @@ git flow release start $versionLabel $devBranch
 #Publish the release branch
 git flow release publish $versionLabel
 
-
 # Finish Release and create tag for new version
-git tag $versionLabel
-
-git flow release finish -m "Tagging" $versionLabel
+git flow release finish -m "Tagging $versionLabel" $versionLabel
+git push --tags
 # merge release branch with the new version number back into develop
 git checkout $masterBranch
+git push origin $masterBranch
 
 git checkout $devBranch
-git merge --no-ff $releaseBranch
-
-
-# remove release branch
-git branch -d $releaseBranch
+git push origin $devBranch
