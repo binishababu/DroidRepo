@@ -6,7 +6,9 @@ sed -i '' "s/public static final String VERSION =.*/public static final String V
 pwd
 input=${1}
 data=(${input//./ })
-echo ${data[1]}
+echo " 0 : ${data[0]}"
+echo " 1 : ${data[1]}"
+echo " 2 : ${data[2]}"
 echo "=====INPUT ${1}"
 echo ${#data[@]}
 if [ ${#data[@]} -gt 1 ]; then
