@@ -1,5 +1,7 @@
-cd /Users/bbabu/DroidRepo
-#release = $RELEASE_VERSION
+cd $HOME/Documents/
+pwd
+
+release = $RELEASE_VERSION
 sed -i '' "s/public static final String VERSION =.*/public static final String VERSION = ${1}/" AMPLibraryInfo.java
 
 #cd $HOME/Documents/Projects/amp-android-sdk/scripts/bash-scripts/
