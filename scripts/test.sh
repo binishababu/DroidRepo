@@ -11,7 +11,7 @@ echo "=====INPUT ${1}"
 echo ${#data[@]}
 if [ ${#data[@]} -gt 1 ]; then
 sprintno=( "${data[1]}.${data[2]}" )
-echo $sprintno
+echo "Length is 2 : $sprintno ======"
 sed -i '' "s/export SPRINT=.*/export SPRINT=$sprintno/" project.sh
 else
 sprintno=( "${data[1]}" )
