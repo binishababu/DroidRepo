@@ -5,7 +5,7 @@ echo $GIT_MERGE_AUTOEDIT
 branch=$(git symbolic-ref HEAD | sed -e 's,.*/\(.*\),\1,')
 
 # v1.0.0, v1.5.2, etc.
-versionLabel=75.1
+versionLabel=${1}
 
 # establish branch and tag name variables
 devBranch=develop
