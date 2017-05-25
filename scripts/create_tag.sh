@@ -1,10 +1,11 @@
 #!/bin/sh
-
+export GIT_MERGE_AUTOEDIT=no
+echo $GIT_MERGE_AUTOEDIT
 # current Git branch
 branch=$(git symbolic-ref HEAD | sed -e 's,.*/\(.*\),\1,')
 
 # v1.0.0, v1.5.2, etc.
-versionLabel=v3.333
+versionLabel=75.1
 
 # establish branch and tag name variables
 devBranch=develop
