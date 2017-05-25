@@ -1,5 +1,6 @@
 #!/bin/sh
-
+export GIT_MERGE_AUTOEDIT=no
+echo $GIT_MERGE_AUTOEDIT
 # current Git branch
 branch=$(git symbolic-ref HEAD | sed -e 's,.*/\(.*\),\1,')
 
