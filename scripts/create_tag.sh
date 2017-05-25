@@ -6,7 +6,7 @@ branch=$(git symbolic-ref HEAD | sed -e 's,.*/\(.*\),\1,')
 
 # v1.0.0, v1.5.2, etc.
 versionLabel=${1}
-
+echo "===== Version Number is : ${1} ====="
 # establish branch and tag name variables
 devBranch=develop
 masterBranch=master
@@ -24,7 +24,7 @@ git fetch
 git pull
 # create the release branch from the -develop branch
 # git checkout -b $releaseBranch $devBranch
-git flow release start $versionLabel $devBranch
+git flow release start $versionLabel
 #Publish the release branch
 git flow release publish $versionLabel
 
