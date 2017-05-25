@@ -13,7 +13,7 @@ releaseBranch=release-$versionLabel
 
 # create the release branch from the -develop branch
 git checkout -b $releaseBranch $devBranch
-echo $'Merge Test\E:x\n'
+#echo $'Merge Test\E:x\n'
 # file in which to update version number
 #versionFile="version.txt"
 
@@ -30,8 +30,8 @@ git commit -am "Incrementing version number to $versionLabel"
 # merge release branch with the new version number into master
 git checkout $masterBranch
 git merge --no-ff $releaseBranch
-+i
-echo $'ihihi\E:x\n'
+#+i
+#echo $'ihihi\E:x\n'
 # create tag for new version from -master
 git tag $versionLabel
 
