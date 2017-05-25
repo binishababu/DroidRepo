@@ -6,7 +6,8 @@ sed -i '' "s/public static final String VERSION =.*/public static final String V
 pwd
 input=$RELEASE_VERSION
 data=(${input//./ })
-#echo ${data[1]}
+echo ${data[1]}
+echo "=====INPUT ${1}"
 echo ${#data[@]}
 if [ ${#data[@]} -gt 1 ]; then
 sprintno=( "${data[1]}.${data[2]}" )
