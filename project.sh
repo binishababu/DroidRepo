@@ -1,6 +1,6 @@
 echo 'Exporting Project Constants'
 
-export SPRINT=11
+export SPRINT=11.12
 export MAJOR_VERSION=6
 export SVN_REV=0
 export RELEASE_VERSION="$MAJOR_VERSION.$SPRINT"
